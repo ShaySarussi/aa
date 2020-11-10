@@ -1,0 +1,25 @@
+
+
+
+<table class="table styled-table">
+  <thead>
+  <tr>
+    <th scope="col">First</th>
+    <th scope="col">Last</th>
+    <th scope="col">Handle</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let post of totalArray" [ngStyle]="{'background-color': getColor(post.userId,post.title) }">
+    <td>{{post.userId}}</td>
+    <td>{{post.id}}</td>
+    <td>{{post.title}}</td>
+    <app-modal [post]="post"></app-modal>
+  </tr>
+  </tbody>
+</table>
+
+
+
+
+

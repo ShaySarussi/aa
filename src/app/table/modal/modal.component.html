@@ -1,0 +1,18 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>{{post.id}}</p>
+    <p>{{post.userId}}</p>
+    <p>{{post.title}}</p>
+  </div>
+
+</ng-template>
+
+
+<img src="https://www.freeiconspng.com/uploads/details-icon-png-cc-by-3-0--it-1.png" (click)="open(content)" width="27"  style="cursor: pointer;margin-right: 20px"/>
+
