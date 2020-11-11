@@ -11,7 +11,7 @@ import {NgbModalConfig, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 })
 export class ModalComponent implements OnInit {
 
-  @Input() post :any;
+  @Input() order :Object;
 
 
   constructor(config: NgbModalConfig, private modalService: NgbModal) {

@@ -1,20 +1,25 @@
 
-
-
 <table class="table styled-table">
   <thead>
   <tr>
-    <th scope="col">First</th>
-    <th scope="col">Last</th>
-    <th scope="col">Handle</th>
+    <th scope="col" *ngFor="let title of titleOfOrder">{{title}}</th>
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let post of totalArray" [ngStyle]="{'background-color': getColor(post.userId,post.title) }">
-    <td>{{post.userId}}</td>
-    <td>{{post.id}}</td>
-    <td>{{post.title}}</td>
-    <app-modal [post]="post"></app-modal>
+  <tr *ngFor="let order of detailsOfOrder" [ngStyle]="{'background-color': getColor(order.ShipCountry,order.ShipCity) }">
+    <td>{{order.ShipCity}}</td>
+    <td>{{order.ShipCountry}}</td>
+    <td>{{order.UnitPrice}}</td>
+    <td>{{order.Quantity}}</td>
+    <td>{{order.Discount}}</td>
+    <td>{{order.ProductName}}</td>
+    <td>{{order.QuantityPerUnit}}</td>
+    <td>{{order["UnitPrice (Products)"]}}</td>
+    <td>{{order.UnitsInStock}}</td>
+    <td>{{order.UnitsOnOrder}}</td>
+
+
+    <app-modal [order]="order"></app-modal>
   </tr>
   </tbody>
 </table>

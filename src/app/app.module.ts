@@ -5,7 +5,7 @@ import { TableComponent } from './table/table.component';
 import {HttpClientModule} from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from './table/modal/modal.component';
-import {ConnectDbService} from './connect-db.service';
+import {TableService} from './table.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import {ConnectDbService} from './connect-db.service';
     HttpClientModule,
     NgbModule
   ],
-  providers: [ConnectDbService,ModalComponent],
+  providers: [TableService,ModalComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,14 +1,21 @@
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+    <h4 class="modal-title" id="modal-basic-title">Order Details</h4>
     <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
   <div class="modal-body">
-    <p>{{post.id}}</p>
-    <p>{{post.userId}}</p>
-    <p>{{post.title}}</p>
+    <p>ShipCity: {{order.ShipCity}}</p>
+    <p>ShipCountry: {{order.ShipCountry}}</p>
+    <p>UnitPrice: {{order.UnitPrice}}</p>
+    <p>Quantity: {{order.Quantity}}</p>
+    <p>Discount: {{order.Discount}}</p>
+    <p>ProductName: {{order.ProductName}}</p>
+    <p>QuantityPerUnit: {{order.QuantityPerUnit}}</p>
+    <p>UnitPrice (Products): {{order["UnitPrice (Products)"]}}</p>
+    <p>UnitsInStock: {{order.UnitsInStock}}</p>
+    <p>UnitsOnOrder: {{order.UnitsOnOrder}}</p>
   </div>
 
 </ng-template>
